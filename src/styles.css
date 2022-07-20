@@ -6,5 +6,5 @@
     --primary: rgb(238, 21, 21);
     --secondary: rgb(34, 34, 36);
     --third: rgb(240, 240, 240);
-    --shadow: rgb(149 157 165 / 0.2) 0px 8px 24px;
+    --shadow: rgba(121, 129, 136, 0.2) 0px 8px 24px;
 }
