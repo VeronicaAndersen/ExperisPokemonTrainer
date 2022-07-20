@@ -7,7 +7,7 @@ header{
     height: 100px;
     background-color: var(--primary);
     line-height: 100px;
-    color: #fff;
+    color: var(--third);
     box-shadow: rgb(149 157 165) 0px 8px 24px;
     border-bottom: var(--secondary) solid 10px;
 }

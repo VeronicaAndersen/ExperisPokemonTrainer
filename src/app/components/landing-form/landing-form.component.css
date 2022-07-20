@@ -1,16 +1,16 @@
 form{
-    border: var(--secondary) solid 2px;
+    border: var(--primary) solid 2px;
     box-shadow: var(--shadow);
     padding: 20px;
     border-radius: 10px;
 }
 input{
-    border-bottom: var(--primary) solid 5px;
+    border-bottom: var(--secondary) solid 5px;
 }
 button {
     border: var(--secondary) solid 2px;
     color: #000;
 }
 button:hover{
-    background-color: var(--secondary);
+    background-color: var(--third);
 }
