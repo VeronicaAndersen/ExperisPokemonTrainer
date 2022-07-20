@@ -5,6 +5,7 @@ import { LoginPage } from "./app/pages/login/login.page";
 import { TrainerPage } from "./app/pages/trainer/trainer.page";
 
 const routes: Routes = [
+    
     {
         path: "",
         component: LoginPage
