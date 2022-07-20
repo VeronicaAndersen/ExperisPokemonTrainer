@@ -1,15 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of, switchMap } from 'rxjs';
+import { map, Observable, of, switchMap, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { StorageKeys } from '../enums/storage-keys.enum';
 import { User } from '../models/user.model';
+import { StorageUtil } from '../utils/storage.util';
 
 const { apiUsers, apiKey } = environment;
 
 @Injectable({
   providedIn: 'root'
 })
-export class LandingService {
+export class LoginService {
 
   // Dependency Injection.
   constructor(private readonly http: HttpClient) { }
@@ -23,6 +25,9 @@ export class LandingService {
             return this.createUser(username);
           }
           return of(user);
+        }),
+        tap( (user: User) => {
+          StorageUtil.storageSave<User>(StorageKeys.User, user);
         })
       )
   }
@@ -57,6 +62,6 @@ export class LandingService {
 
   }
 
-  // If user || Create User -> Store User
+  
 
 }
