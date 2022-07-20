@@ -1,4 +1,5 @@
 <ul>
-    <li>sak 1</li>
-    <li>sak 2</li>
+    <li *ngFor="let pokemon of pokemons">
+        <span>{{ pokemon.name }} by {{ pokemon.url }}</span>
+    </li>
 </ul>

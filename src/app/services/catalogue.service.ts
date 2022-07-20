@@ -13,7 +13,7 @@ export class CatalogueService {
 
   private _pokemons: Pokemon[] = [];
   private _error: string = "";
-  private _loading: boolean = false; 
+  private _loading: boolean = false;
 
   get pokemons(): Pokemon[] {
     return this._pokemons;
@@ -22,24 +22,28 @@ export class CatalogueService {
   get error(): string {
     return this._error;
   }
+  
+  get loading(): boolean {
+    return this._loading;
+  }
 
   constructor(private readonly http: HttpClient) { }
 
   public findAllPokemons(): void {
-    this._loading = true; 
+    this._loading = true;
     this.http.get<Pokemon[]>(apiPokemons)
-    .pipe(
-      finalize(() => {
-        this._loading = false;
+      .pipe(
+        finalize(() => {
+          this._loading = false;
+        })
+      )
+      .subscribe({
+        next: (pokemons: Pokemon[]) => {
+          this._pokemons = pokemons;
+        },
+        error: (error: HttpErrorResponse) => {
+          this._error = error.message;
+        }
       })
-    )
-    .subscribe( {
-      next: (pokemons: Pokemon[]) => {
-        this._pokemons = pokemons;
-      },
-      error: (error: HttpErrorResponse) =>{
-        this._error = error.message;
-      }
-    })
   }
 }
