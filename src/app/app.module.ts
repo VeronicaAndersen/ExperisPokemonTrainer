@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LandingPage } from './pages/landing/landing.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
-import { LandingFormComponent } from './componets/landing-form/landing-form.component';
+import { LandingFormComponent } from './components/landing-form/landing-form.component';
 
 // Decorator 
 @NgModule({
