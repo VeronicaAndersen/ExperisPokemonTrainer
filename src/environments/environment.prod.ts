@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
   apiUsers: "https://assignmenttwo-api.herokuapp.com/trainers",
-  apiPokemons: "",
+  apiPokemons: "https://pokeapi.co/api/v2/pokemon",
+  apiKey: "xcozeknGOUiRqMwiw4kwag=="
 };
