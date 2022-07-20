@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUsers: "https://assignmenttwo-api.herokuapp.com/trainers",
+  apiPokemons: "",
 };
