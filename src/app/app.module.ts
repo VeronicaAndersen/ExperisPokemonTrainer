@@ -8,6 +8,8 @@ import { LandingPage } from './pages/landing/landing.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { LandingFormComponent } from './components/landing-form/landing-form.component';
+import { CollectionListComponent } from './components/collection-list/collection-list.component';
+import { CatalogueListComponent } from './components/catalogue-list/catalogue-list.component';
 
 // Decorator 
 @NgModule({
@@ -16,7 +18,9 @@ import { LandingFormComponent } from './components/landing-form/landing-form.com
     LandingPage,
     TrainerPage,
     CataloguePage,
-    LandingFormComponent
+    LandingFormComponent,
+    CollectionListComponent,
+    CatalogueListComponent
   ],
   imports: [ 
     BrowserModule,
