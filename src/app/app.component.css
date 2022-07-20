@@ -34,13 +34,21 @@
     height: 50px;
     border-radius: 50%;
     width: 50px;
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto auto;
 }
 
 .header h1 {
     margin-left: 20px;
     font-family: Pokemon;
     font-size: x-large;
+}
+
+.header-links{
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.header-links a{
+    margin-right: 30px;
 }
