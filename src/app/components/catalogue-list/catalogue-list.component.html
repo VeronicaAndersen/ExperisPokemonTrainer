@@ -1,5 +1,9 @@
 <ul>
+    <!-- <li *ngFor="let pokemonData of pokemons">
+        <span>{{ pokemonData.name }} by <img src="{{ pokemonData.url }}" alt="pokemons"></span>
+    </li> -->
     <li *ngFor="let pokemon of pokemons">
-        <span>{{ pokemon.name }} by {{ pokemon.url }}</span>
+        {{pokemon?.name}}
+        <img src="{{pokemon?.url}}">
     </li>
 </ul>
