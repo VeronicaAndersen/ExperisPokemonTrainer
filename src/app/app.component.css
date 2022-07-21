@@ -51,4 +51,8 @@
 
 .header-links a{
     margin-right: 30px;
+    padding: 40px;
+}
+.header-links a:hover{
+    font-weight: 600;
 }
