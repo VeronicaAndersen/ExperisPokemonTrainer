@@ -4,6 +4,7 @@
     (click)="onCollectedClick()"
     class="border border-slate-300 rounded flex justify-center items-center p-2 text-yellow-400 " >
         
+    <ng-container *ngIf="!loading; else spinner">
     <ng-container *ngIf="isCollected; then collected else notCollected" class="material-icons"></ng-container>
     
     <ng-template #collected>
@@ -12,6 +13,11 @@
     <ng-template #notCollected>
         <span class="material-icons">star_border</span>
         </ng-template>
+    </ng-container>
+
+    <ng-template #spinner>
+        <span class="material-icons animate-spin">refresh</span>
+    </ng-template>
 
     </button>
 </aside>
