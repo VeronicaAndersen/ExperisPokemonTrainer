@@ -30,15 +30,15 @@ export class CollectedButtonComponent implements OnInit {
 
   onCollectedClick(): void {
     // Add the pokemon to collected
-   this.collectedService.addToCollected(this.pokemonId)
-    .subscribe({
-      next: (responese: User) => {
-        console.log("NEXT ", responese)
-      }, 
+    this.collectedService.addToCollected(this.pokemonId)
+      .subscribe({
+        next: (user: User) => {
+          this.isCollected = this.userService.inCollected(this.pokemonId); // Render interface when adding a pokemon.
+        },
         error: (error: HttpErrorResponse) => {
           console.log("ERROR ", error.message);
         }
-    })
+      })
   }
 
 }

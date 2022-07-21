@@ -45,8 +45,11 @@ export class CollectedService {
       throw new Error("addToCollected: No pokemon with id: " + pokemonId);
     }
 
+    // Does pokemon exist in collected.
     if (this.userService.inCollected(pokemonId)) {
-      throw new Error("addToCollected: Pokemon already collected.");
+      this.userService.removeFromCollected(pokemonId);
+    }else{
+      this.userService.addToCollected(pokemon);
     }
 
     const headers = new HttpHeaders({
@@ -57,7 +60,7 @@ export class CollectedService {
     this._loading = true; 
 
     return this.http.patch<User>(`${apiUsers}/${user.id}`, {
-      collected: [...user.collected, pokemon]
+      collected: [...user.collected] // Already updated.
     }, {
       headers
     })

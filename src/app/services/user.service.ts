@@ -32,4 +32,16 @@ export class UserService {
 
     return false; 
   }
+
+  public addToCollected(pokemon: Pokemon): void {
+    if (this._user) {
+      this._user.collected.push(pokemon);
+    }
+  }
+
+  public removeFromCollected(pokemonId: number): void {
+    if (this._user) {
+      this._user.collected = this._user.collected.filter((pokemon: Pokemon) => pokemon.id !== pokemonId);
+    }
+  }
 }
