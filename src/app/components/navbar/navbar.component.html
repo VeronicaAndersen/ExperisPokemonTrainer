@@ -1,0 +1,15 @@
+<header>
+  <div class="header">
+    <h1>Pokémon</h1>
+  </div>
+  <div class="header-middle">
+    <div class="circle"></div>
+  </div>
+  <div class="header-bottom"></div>
+  <ng-container *ngIf="user !== undefined">
+    <div class="header-links">
+      <a routerLink="/catalogue">Catalogue</a>
+      <a routerLink="/trainer">Trainer</a>
+    </div>
+  </ng-container>
+</header>

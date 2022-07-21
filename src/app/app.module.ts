@@ -11,6 +11,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { CollectionListComponent } from './components/collection-list/collection-list.component';
 import { CatalogueListComponent } from './components/catalogue-list/catalogue-list.component';
 import { FormsModule } from '@angular/forms';
+import { CatalogueListItemComponent } from './components/catalogue-list-item/catalogue-list-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // Decorator 
 @NgModule({
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     CataloguePage,
     LoginFormComponent,
     CollectionListComponent,
-    CatalogueListComponent
+    CatalogueListComponent,
+    CatalogueListItemComponent,
+    NavbarComponent
   ],
   imports: [ 
     BrowserModule,

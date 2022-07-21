@@ -1,0 +1,8 @@
+<li *ngIf="pokemon" class="pokemon-card">
+    <section>
+        <img [src]="pokemon.url" [alt]="pokemon.name"/>
+    </section>
+    <section>
+        <span>{{pokemon?.name}}</span>
+    </section>
+</li>

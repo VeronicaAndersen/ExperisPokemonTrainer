@@ -3,11 +3,3 @@ ul{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.pokemon-card{
-    height: 250px;
-    width: 200px;
-    border: solid 2px var(--secondary) ;
-    box-shadow: var(--shadow);
-    border-radius: 10px;
-    margin: 20px;
-}

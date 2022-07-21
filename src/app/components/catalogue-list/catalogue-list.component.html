@@ -1,6 +1,6 @@
 <ul>
-    <li class="pokemon-card" *ngFor="let pokemon of pokemons">
-        {{pokemon?.name}}
-        <!-- <img src="{{pokemon?.url}}"> -->
-    </li>
+    <app-catalogue-list-item 
+    *ngFor="let pokemon of pokemons"
+    [pokemon]="pokemon"
+    ></app-catalogue-list-item>
 </ul>
