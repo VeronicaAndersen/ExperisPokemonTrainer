@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { CollectedService } from 'src/app/services/collected.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-collected-button',
@@ -10,6 +11,7 @@ import { CollectedService } from 'src/app/services/collected.service';
 })
 export class CollectedButtonComponent implements OnInit {
 
+  public isCollected: boolean = false;
   @Input() pokemonId: number = 0;
 
   get loading(): boolean {
@@ -17,10 +19,13 @@ export class CollectedButtonComponent implements OnInit {
   }
 
   constructor(
+    private userService: UserService,
     private readonly collectedService: CollectedService
   ) { }
 
   ngOnInit(): void {
+    // Inputs are resolved!
+    this.isCollected = this.userService.inCollected(this.pokemonId);
   }
 
   onCollectedClick(): void {
