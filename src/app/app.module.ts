@@ -13,6 +13,7 @@ import { CatalogueListComponent } from './components/catalogue-list/catalogue-li
 import { FormsModule } from '@angular/forms';
 import { CatalogueListItemComponent } from './components/catalogue-list-item/catalogue-list-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CollectedButtonComponent } from './components/collected-button/collected-button.component';
 
 // Decorator 
 @NgModule({
@@ -25,7 +26,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CollectionListComponent,
     CatalogueListComponent,
     CatalogueListItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    CollectedButtonComponent
   ],
   imports: [ 
     BrowserModule,

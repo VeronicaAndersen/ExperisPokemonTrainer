@@ -1,6 +1,8 @@
 <li *ngIf="pokemon" class="pokemon-card">
+    <app-collected-button [pokemonId]="pokemon.id" ></app-collected-button>
     <section>
-        <img [src]="pokemon.url" [alt]="pokemon.name"/>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png"
+            [alt]="pokemon.name" />
     </section>
     <section>
         <span>{{pokemon?.name}}</span>
