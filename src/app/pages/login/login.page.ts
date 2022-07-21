@@ -11,6 +11,6 @@ export class LoginPage {
   constructor(private readonly router: Router) { }
 
     handleLogin(): void {
-      this.router.navigateByUrl("/trainer")
+      this.router.navigateByUrl("/catalogue")
     }
 }
