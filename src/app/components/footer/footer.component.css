@@ -1,0 +1,16 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 40px;
+    line-height: 30px;
+    background-color: var(--primary);
+    text-align: center;
+    z-index: 50;
+    border-top: solid 5px var(--secondary);
+}
+
+footer p,
+footer a {
+    margin: auto 10px;
+}

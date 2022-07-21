@@ -2,9 +2,11 @@
     <app-collected-button [pokemonId]="pokemon.id" ></app-collected-button>
     <section>
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png"
-            [alt]="pokemon.name" />
+            [alt]="pokemon.name" class="pokemon-img"/>
     </section>
     <section>
-        <span>{{pokemon?.name}}</span>
+        
+        <span class="test ">{{pokemon?.name}}</span>
+    
     </section>
 </li>

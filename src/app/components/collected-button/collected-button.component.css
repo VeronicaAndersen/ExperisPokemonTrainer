@@ -1,0 +1,4 @@
+button:hover{
+background-color: var(--third);
+padding: 0.5rem;
+}

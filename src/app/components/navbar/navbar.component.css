@@ -1,7 +1,10 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
-* {
-    margin: 0;
+header{
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 50;
 }
 
 .header {
@@ -12,7 +15,6 @@
     color: var(--third);
     box-shadow: rgb(149 157 165) 0px 8px 24px;
     border-bottom: var(--secondary) solid 10px;
-
 }
 
 .header-bottom {
@@ -50,7 +52,7 @@
 }
 
 .header-links a{
-    margin-right: 30px;
+    margin-right: 10px;
     padding: 40px;
 }
 .header-links a:hover{

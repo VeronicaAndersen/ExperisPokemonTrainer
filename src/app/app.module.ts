@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { CatalogueListItemComponent } from './components/catalogue-list-item/catalogue-list-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CollectedButtonComponent } from './components/collected-button/collected-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // Decorator 
 @NgModule({
@@ -27,7 +28,8 @@ import { CollectedButtonComponent } from './components/collected-button/collecte
     CatalogueListComponent,
     CatalogueListItemComponent,
     NavbarComponent,
-    CollectedButtonComponent
+    CollectedButtonComponent,
+    FooterComponent
   ],
   imports: [ 
     BrowserModule,
