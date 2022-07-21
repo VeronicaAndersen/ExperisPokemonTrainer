@@ -54,4 +54,8 @@ export class CatalogueService {
 
   }
 
+  public pokemonById(id: number): Pokemon | undefined {
+    return this._pokemonsData.find((pokemon: Pokemon) => pokemon.id === id);
+  } 
+
 }
