@@ -8,7 +8,6 @@ import { LoginPage } from './pages/login/login.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { CollectionListComponent } from './components/collection-list/collection-list.component';
 import { CatalogueListComponent } from './components/catalogue-list/catalogue-list.component';
 import { FormsModule } from '@angular/forms';
 import { CatalogueListItemComponent } from './components/catalogue-list-item/catalogue-list-item.component';
@@ -24,7 +23,6 @@ import { FooterComponent } from './components/footer/footer.component';
     TrainerPage,
     CataloguePage,
     LoginFormComponent,
-    CollectionListComponent,
     CatalogueListComponent,
     CatalogueListItemComponent,
     NavbarComponent,
