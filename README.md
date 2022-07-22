@@ -1,4 +1,4 @@
-# Assignment # - Pokemon Trainer
+# Assignment 3 - Pokemon Trainer
 This project was created as part of an assigment in javascript. The application allows for users to collect and see pokemons. 
 
 ## Installation
