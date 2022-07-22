@@ -1,8 +1,10 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
-*{
+
+* {
     overflow: hidden;
 }
-header{
+
+header {
     position: sticky;
     top: 0;
     width: 100vw;
@@ -43,21 +45,25 @@ header{
 }
 
 .header h1 {
-    margin-left: 20px;
+    margin-left: 50px;
     font-family: Pokemon;
     font-size: x-large;
 }
 
-.header-links{
+.header-links {
     position: absolute;
-    top: 35px;
+    top: 0px;
     right: 0;
+    height: 90px;
+    line-height: 90px;
 }
 
-.header-links a{
-    margin-right: 10px;
-    padding: 40px;
+.header-links a {
+    padding: 40px 20px 40px 20px;
 }
-.header-links a:hover{
+
+.header-links a:hover {
     font-weight: 600;
+    background-color: #f83535;
 }
+
