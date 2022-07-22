@@ -11,12 +11,11 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CollectedButtonComponent implements OnInit {
 
+
+  public loading: boolean = false;
+
   public isCollected: boolean = false;
   @Input() pokemonId: number = 0;
-
-  get loading(): boolean {
-    return this.collectedService.loading;
-  }
 
   constructor(
     private userService: UserService,
@@ -29,10 +28,12 @@ export class CollectedButtonComponent implements OnInit {
   }
 
   onCollectedClick(): void {
+    this.loading = true;
     // Add the pokemon to collected
     this.collectedService.addToCollected(this.pokemonId)
       .subscribe({
         next: (user: User) => {
+          this.loading = false;
           this.isCollected = this.userService.inCollected(this.pokemonId); // Render interface when adding a pokemon.
         },
         error: (error: HttpErrorResponse) => {

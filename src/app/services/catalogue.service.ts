@@ -30,6 +30,11 @@ export class CatalogueService {
   constructor(private readonly http: HttpClient) { }
 
   public findAllPokemons(): void {
+
+    if (this._pokemonsData.length > 0 || this.loading) {
+      return;
+    }
+
     this._loading = true;
     this.http.get<PokemonData>(apiPokemons)
       .pipe(
