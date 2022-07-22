@@ -1,4 +1,4 @@
-button:hover{
-background-color: var(--third);
-padding: 0.5rem;
+.material-icons{
+    font-size: 40px;
+    color: #fed52d;
 }

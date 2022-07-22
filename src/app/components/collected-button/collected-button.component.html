@@ -1,8 +1,7 @@
 
-<aside class="absolute top-4 right-4">
+<aside class="absolute top-3 right-3">
     <button 
-    (click)="onCollectedClick()"
-    class="border border-slate-300 rounded flex justify-center items-center p-2 text-yellow-400 " >
+    (click)="onCollectedClick()">
         
     <ng-container *ngIf="!loading; else spinner">
     <ng-container *ngIf="isCollected; then collected else notCollected" class="material-icons"></ng-container>
