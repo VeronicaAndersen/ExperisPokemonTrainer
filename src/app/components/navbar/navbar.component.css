@@ -45,7 +45,7 @@ header {
 }
 
 .header h1 {
-    margin-left: 50px;
+    margin-left: 100px;
     font-family: Pokemon;
     font-size: x-large;
 }
@@ -56,6 +56,7 @@ header {
     right: 0;
     height: 90px;
     line-height: 90px;
+    margin-right: 50px; 
 }
 
 .header-links a {
@@ -67,3 +68,12 @@ header {
     background-color: #f83535;
 }
 
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+    .header h1 {
+        margin-left: 50px;
+    }
+    .header-links {
+        margin-right: 20px;
+    }
+}
