@@ -1,4 +1,5 @@
-ul{
+/* Styling for the unsoretdlist that gives a respnsivness layout. */
+ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

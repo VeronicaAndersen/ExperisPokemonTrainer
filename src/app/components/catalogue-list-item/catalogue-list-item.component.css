@@ -1,4 +1,5 @@
-.pokemon-card{
+/* Styling for the pokemons individual cards. */
+.pokemon-card {
     position: relative;
     height: 250px;
     width: 200px;
@@ -8,12 +9,14 @@
     margin: 10px 20px 30px 20px;
     text-align: center;
 }
-.pokemon-img{
+
+.pokemon-img {
     padding: 60px 0 10px 0;
     margin: 0 auto 0 auto;
     width: 125px;
 }
-.test{
+
+.pokemon-title {
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: underline var(--secondary) 3px;

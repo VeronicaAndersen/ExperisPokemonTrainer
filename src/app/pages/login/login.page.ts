@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class LoginPage {
 
   constructor(private readonly router: Router) { }
-
+    /* Navigates the user to catalogue page when logged in. */
     handleLogin(): void {
       this.router.navigateByUrl("/catalogue")
     }

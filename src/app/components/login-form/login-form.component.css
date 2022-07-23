@@ -1,3 +1,4 @@
+/* Styling fro the login form adds a card styling for the form and styling for input and btn. */
 form{
     border: var(--primary) solid 2px;
     box-shadow: var(--shadow);
@@ -13,4 +14,8 @@ button {
 }
 button:hover{
     background-color: var(--third);
+}
+.validation{
+    color: var(--primary);
+    font-size: x-small;
 }

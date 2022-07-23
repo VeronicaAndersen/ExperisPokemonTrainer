@@ -1,6 +1,5 @@
-<ul>
-    <app-catalogue-list-item 
-    *ngFor="let pokemon of pokemons"
-    [pokemon]="pokemon"
-    ></app-catalogue-list-item>
-</ul>
+<!-- Creates an unsortedlist that iterates through all 
+        pokemons to the catalogue-list-item. -->
+        <ul>
+            <app-catalogue-list-item *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-catalogue-list-item>
+        </ul>

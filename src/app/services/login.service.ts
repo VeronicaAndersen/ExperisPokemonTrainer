@@ -27,8 +27,6 @@ export class LoginService {
       )
   }
 
-  // login
-
   // Check if user exist
   private checkUsername(username: string): Observable<User | undefined> {
     return this.http.get<User[]>(`${apiUsers}?username=${username}`)

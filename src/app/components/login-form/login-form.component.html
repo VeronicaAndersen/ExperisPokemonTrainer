@@ -1,21 +1,23 @@
-
+<!-- Creates a form with some tailwind styling. Contains an input & submit btn with validation. -->
 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
         <form class="mt-8 space-y-6" #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
             <input type="hidden" name="remember" value="true">
             <div class="rounded-md shadow-sm -space-y-px">
                 <div>
-                    <input type="text"
-                        ngModel
-                        #username="ngModel"
-                        id="username" 
-                        name="username" required
-                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                        placeholder="Username">
+                    <input class="form-control" type="text" id="username"
+                        [ngClass]="{'is-valid': username.valid, 'is-invalid': (username.invalid && ( username.dirty || username.touched ))}"
+                        name="username" minlength="2" placeholder="Example Ash" ngModel #username="ngModel" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
                 </div>
             </div>
+            <!-- Validation username input username -->
+            <div *ngIf="username.errors && username.invalid && ( username.dirty || username.touched) ">
+                <p class="validation" *ngIf="username.errors?.['required']">*Trainer name is required!</p>
+                <p class="validation" *ngIf="username.errors?.['minlength']">*Trainer name too short</p>
+            </div>
             <div>
-                <button type="submit"
+                <button type="submit" [disabled]="loginForm.invalid"
                     class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     Login
                 </button>

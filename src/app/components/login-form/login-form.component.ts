@@ -24,7 +24,7 @@ export class LoginFormComponent {
   
   public loginSubmit(loginForm: NgForm): void{
 
-    //username
+    //* Takes the value from the input & declares it to username */
     const {username} = loginForm.value;
     
     this.loginService.login(username)

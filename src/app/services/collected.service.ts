@@ -20,21 +20,17 @@ export class CollectedService {
     private readonly userService: UserService,
 
   ) { }
-  // Get the pokemon based on id
-
-  // Patch request with the userId and the pokemon
 
   public addToCollected(pokemonId: number): Observable<User> {
-
+    /* Throws an error if there isn´t any user logged in.  */
     if (!this.userService.user) {
       throw new Error("addToCollected: There is no user!");
-
     }
 
     const user: User = this.userService.user;
 
     const pokemon: Pokemon | undefined = this.catalogueService.pokemonById(pokemonId);
-
+    /* Throws an error if the pokemon doesn´t exist. */
     if (!pokemon) {
       throw new Error("addToCollected: No pokemon with id: " + pokemonId);
     }
@@ -45,12 +41,12 @@ export class CollectedService {
     }else{
       this.userService.addToCollected(pokemon);
     }
-
+    /* Creates information about the http request & response. */
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'x-api-key': apiKey
     })
-
+    /* Returns with a patch request to the api to update the collected pokemons for the logged in user. */
     return this.http.patch<User>(`${apiUsers}/${user.id}`, {
       collected: [...user.collected] // Already updated.
     }, {

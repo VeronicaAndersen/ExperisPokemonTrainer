@@ -7,7 +7,7 @@ import { Pokemon } from 'src/app/models/pokemon.model';
   styleUrls: ['./catalogue-list-item.component.css']
 })
 export class CatalogueListItemComponent implements OnInit {
-
+  // This is a guard if the value is null or undefined.
   @Input() pokemon?: Pokemon
 
   constructor() { }

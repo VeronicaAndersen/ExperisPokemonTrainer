@@ -1,4 +1,5 @@
 <main class="container mx-auto p-4">
-    <p *ngIf="loading">Loading pokémons...</p>
-    <app-catalogue-list [pokemons]="pokemons"></app-catalogue-list>
+    <ng-container *ngIf="!loading; else spinner"></ng-container> <!-- This checks if loading is true or false. -->
+    <app-catalogue-list [pokemons]="pokemons"></app-catalogue-list> <!-- This contains ul from cataloguelist. -->
+    <ng-template #spinner><span class="material-icons animate-spin">refresh</span><span>Loading pokémons...</span></ng-template> <!-- This is the spinner that shows if loading is true. -->
 </main>

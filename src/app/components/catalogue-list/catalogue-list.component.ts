@@ -7,7 +7,7 @@ import { Pokemon } from 'src/app/models/pokemon.model';
   styleUrls: ['./catalogue-list.component.css']
 })
 export class CatalogueListComponent implements OnInit {
-
+  // This creates an empty array from Pokemon model.
   @Input() pokemons: Pokemon[] = [];
 
   constructor() { }

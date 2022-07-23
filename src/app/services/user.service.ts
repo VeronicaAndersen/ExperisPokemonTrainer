@@ -9,7 +9,7 @@ import { StorageUtil } from '../utils/storage.util';
 })
 export class UserService {
 
-  // _user?: User is eqvualent to _user: User | undefined 
+  // _user?: User is equivalent to _user: User | undefined 
   private _user?: User; 
 
   get user(): User | undefined {

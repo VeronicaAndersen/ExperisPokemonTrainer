@@ -1,12 +1,14 @@
-<li *ngIf="pokemon" class="pokemon-card">
-    <app-collected-button [pokemonId]="pokemon.id" ></app-collected-button>
-    <section>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png"
-            [alt]="pokemon.name" class="pokemon-img"/>
-    </section>
-    <section>
-        
-        <span class="test ">{{pokemon?.name}}</span>
-    
-    </section>
-</li>
+<!-- For every pokemon that creates a card item that contains an 
+        image, title & a collected button with a star.
+        These images gets from a pokemon api that gets {{pokemon.id}} 
+        and adds it to the url that shows the right image for that pokemon. -->
+        <li *ngIf="pokemon" class="pokemon-card">
+            <app-collected-button [pokemonId]="pokemon.id"></app-collected-button>
+            <section>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png"
+                    [alt]="pokemon.name" class="pokemon-img" />
+            </section>
+            <section>
+                <span class="pokemon-title ">{{pokemon?.name}}</span>
+            </section>
+        </li>
