@@ -43,8 +43,8 @@ export class CatalogueService {
         })
       )
       .subscribe({
-        next: (PokemonData: PokemonData) => {
-          const pokemons: Pokemon[] = PokemonData.results;
+        next: (pokemonData: PokemonData) => {
+          const pokemons: Pokemon[] = pokemonData.results;
           this._pokemonsData = pokemons;
           for (let i = 0; i < pokemons.length; i++) {
             let imgArray = pokemons[i].url.split("/");
