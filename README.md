@@ -10,21 +10,44 @@ npm install -g npm
 ```
 npm will be used to start a local demo of the application.
 ### Setting up the api connection
-Create a file named '.env' in the project folder and enter the following:
+Create a folder named 'environments' in the project folder and enter the following files:
 ```
-NG_APP_API_KEY=<api key placeholder>
-NG_APP_API_URL=<api url placeholder>
+environments.ts
+envrinoments.prod.ts
 ```
-Replace placeholders with your api key and api url. 
+In the environments.ts add the follwoing:
+```
+export const environment = {
+    production: false,
+    apiUsers: "<api users placeholder>",
+    apiPokemons: "<api pokemon placeholder>", 
+    apiKey: "<api key placeholder>"
+};
+
+```
+In the envrinoments.prod.ts add the following: 
+```
+export const environment = {
+    production: true,
+    apiUsers: "<api users placeholder>",
+    apiPokemons: "<api pokemon placeholder>", 
+    apiKey: "<api key placeholder>"
+};
+
+```
+Replace placeholders with your api user key, api url and apiKey. 
 
 ## Usage
 Enter the following in the terminal to start the application:
 ```
-npm start
+ng serve
 ```
 A local demo of the application will start at http://localhost:4200.
 
 Enter an username to get access to the collection feature. If it the first time logging in with that username an account will be created automatically.
+
+## Deployment
+
 
 ## Contributors
 Johanna Olsson @johannaolsson
