@@ -13,9 +13,19 @@ npm will be used to start a local demo of the application.
 Create a folder named 'environments' in the project folder and enter the following files:
 ```
 environments.ts
-envrinments.prod.ts
+envrinoments.prod.ts
 ```
-In the files add the follwoing:
+In the environments.ts add the follwoing:
+```
+export const environment = {
+    production: false,
+    apiUsers: "<api users placeholder>",
+    apiPokemons: "<api pokemon placeholder>", 
+    apiKey: "<api key placeholder>"
+};
+
+```
+In the envrinoments.prod.ts add the following: 
 ```
 export const environment = {
     production: true,
