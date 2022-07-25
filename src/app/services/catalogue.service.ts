@@ -35,17 +35,20 @@ export class CatalogueService {
       return;
     }
 
-    this._loading = true;
+    this._loading = true; // Sets the loading variable to true.
     this.http.get<PokemonData>(apiPokemons)
       .pipe(
         finalize(() => {
-          this._loading = false;
+          this._loading = false; // Sets the loading variable to false.
         })
       )
       .subscribe({
         next: (pokemonData: PokemonData) => {
+          // Gets pokemonData that contains the pokemon results and adds it to Pokemon array.
           const pokemons: Pokemon[] = pokemonData.results;
           this._pokemonsData = pokemons;
+
+          // Iterates through the pokemons and splits url to the specific pokemon id.
           for (let i = 0; i < pokemons.length; i++) {
             let imgArray = pokemons[i].url.split("/");
             let id = imgArray[imgArray.length-2];

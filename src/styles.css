@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Sets application colors */
 :root{
     --primary: rgb(238, 21, 21);
     --secondary: rgb(34, 34, 36);

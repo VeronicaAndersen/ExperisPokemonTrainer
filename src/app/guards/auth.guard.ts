@@ -15,6 +15,7 @@ export class AuthGuard implements CanActivate {
 
   }
 
+  // Checks for log in user, otherwise navigate to loginPage.
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {

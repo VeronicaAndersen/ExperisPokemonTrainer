@@ -5,6 +5,7 @@ import { CataloguePage } from "./pages/catalogue/catalogue.page";
 import { LoginPage } from "./pages/login/login.page";
 import { TrainerPage } from "./pages/trainer/trainer.page";
 
+// Declaring paths for routes.
 const routes: Routes = [
     {
         path: "",
@@ -18,12 +19,12 @@ const routes: Routes = [
     {
         path: "catalogue",
         component: CataloguePage,
-        canActivate: [ AuthGuard]
+        canActivate: [ AuthGuard ]
     },
     {
         path: "trainer",
         component: TrainerPage,
-        canActivate: [ AuthGuard]
+        canActivate: [ AuthGuard ]
     }
 ]
 

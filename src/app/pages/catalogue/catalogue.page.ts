@@ -9,13 +9,17 @@ import { CatalogueService } from 'src/app/services/catalogue.service';
 })
 export class CataloguePage implements OnInit {
 
+  // Gets pokemons from pokemon models.
   get pokemons(): Pokemon[]{
     return this.catalogueService.pokemons;
   }
 
+  // Gets status from loading.
   get loading(): boolean{
     return this.catalogueService.loading;
   }
+
+  // Gets error.
   get error(): string{
     return this.catalogueService.error;
   }
