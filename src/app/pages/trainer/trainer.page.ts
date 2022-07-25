@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { StorageKeys } from 'src/app/enums/storage-keys.enum';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
-import { StorageUtil } from 'src/app/utils/storage.util';
 
 @Component({
   selector: 'app-trainer',
@@ -29,7 +27,7 @@ export class TrainerPage implements OnInit {
 
   constructor(
     private userService: UserService,
-    private readonly router: Router
+    private readonly router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -37,9 +35,11 @@ export class TrainerPage implements OnInit {
       this.username = this.user.username;
     }
   }
+
+  // Clears localStorage and navigate user to loginPage
   onLogoutClick(): void {
-    window.localStorage.clear();
     this.router.navigateByUrl("/login");
+    this.userService.userLogout;
     this.userService.user = undefined;
   }
 

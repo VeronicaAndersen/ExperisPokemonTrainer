@@ -9,7 +9,6 @@ import { StorageUtil } from '../utils/storage.util';
 })
 export class UserService {
 
-  // _user?: User is equivalent to _user: User | undefined 
   private _user?: User; 
 
   get user(): User | undefined {
@@ -18,6 +17,11 @@ export class UserService {
 
   set user(user: User | undefined) {
     StorageUtil.storageSave<User>(StorageKeys.User, user!);
+    this._user = user
+  }
+
+  set userLogout(user: User | undefined) {
+    StorageUtil.storageDelete<User>(StorageKeys.User);
     this._user = user
   }
 
