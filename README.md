@@ -40,7 +40,7 @@ Replace placeholders with your api user key, api url and apiKey.
 ## Usage
 Enter the following in the terminal to start the application:
 ```
-npm start
+ng serve
 ```
 A local demo of the application will start at http://localhost:4200.
 
