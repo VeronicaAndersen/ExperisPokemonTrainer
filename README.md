@@ -47,7 +47,7 @@ A local demo of the application will start at http://localhost:4200.
 Enter an username to get access to the collection feature. If it the first time logging in with that username an account will be created automatically.
 
 ## Deployment
-
+https://trainer-pokemon.vercel.app
 
 ## Contributors
 Johanna Olsson @johannaolsson
