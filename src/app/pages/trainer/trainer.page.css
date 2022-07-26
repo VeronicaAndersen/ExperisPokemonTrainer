@@ -13,6 +13,10 @@ button {
     border: var(--secondary) solid 2px;
 }
 
+button:hover{
+    background-color: var(--third);
+}
+
 /* For mobile phones */
 @media only screen and (max-width: 600px) {
     button {

@@ -11,6 +11,7 @@ input{
 button {
     border: var(--secondary) solid 2px;
     color: #000;
+    cursor: pointer;
 }
 button:hover{
     background-color: var(--third);
